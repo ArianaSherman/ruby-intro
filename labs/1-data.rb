@@ -18,4 +18,4 @@
 
 number1=rand(1..6)
 number2=rand(1..6)
-puts number1,number2,number1+number2
+puts number1,number2,"Total: #{number1+number2}"

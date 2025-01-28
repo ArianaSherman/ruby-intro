@@ -8,4 +8,17 @@
 # end
 
 # Loop through tacos
-# tacos = ["carnitas", "carne asada", "pollo", "pescado"]
+tacos = ["carnitas", "carne asada", "pollo", "pescado"]
+index=0
+loop do
+    if index==tacos.size #conditional statement 
+        break #break is the quit statement for a loop 
+    end 
+    taco=tacos[index] #grab next portion of the array 
+    puts "#{taco} tacos!"
+    index=index+1
+end
+
+for __ in tacos 
+    #do something in tacos 
+end 
