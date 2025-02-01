@@ -30,3 +30,18 @@ weather_data = {
     { temperature: 60, conditions: "Rainy", precipitation: 0.9 }
   ]
 }
+puts "Currently it is #{weather_data[:current][:temperature]} degrees and #{weather_data[:current][:conditions]}."
+puts "Forecast for the next 7 days: "
+index=0
+info=0  
+loop do 
+  break if index==weather_data[:forecast].size #quit if we run out of forecast days
+  if weather_data[:forecast][index][:precipitation]>0.5 && weather_data[:forecast][index][:conditions]!="Rainy"
+    info=weather_data[:forecast][index][:precipitation]*100
+    puts "#{weather_data[:forecast][index][:temperature]} degrees and #{weather_data[:forecast][index][:conditions]} with a #{info}% chance of rain"
+  else puts "#{weather_data[:forecast][index][:temperature]} degrees and #{weather_data[:forecast][index][:conditions]}"
+  end
+  index=index+1
+  info=0 #reset rainchance 
+end
+
